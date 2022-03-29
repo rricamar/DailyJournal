@@ -1,7 +1,6 @@
 import UIKit
 
 class EntriesTableViewController: UITableViewController {
-    
     var entries: [Entry] = []
 
     override func viewDidLoad() {
@@ -26,5 +25,4 @@ class EntriesTableViewController: UITableViewController {
             entryVc.entriesVc = self
         }
     }
-
 }
