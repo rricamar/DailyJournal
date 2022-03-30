@@ -16,9 +16,10 @@
 		82E683CD27F22B8600CB525E /* DailyJournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E683CC27F22B8600CB525E /* DailyJournalTests.swift */; };
 		82E683D727F22B8600CB525E /* DailyJournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E683D627F22B8600CB525E /* DailyJournalUITests.swift */; };
 		82E683D927F22B8600CB525E /* DailyJournalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E683D827F22B8600CB525E /* DailyJournalUITestsLaunchTests.swift */; };
-		82E683E627F3764400CB525E /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E683E527F3764400CB525E /* Entry.swift */; };
 		82E683E827F377B100CB525E /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E683E727F377B100CB525E /* EntriesTableViewController.swift */; };
 		82E683EA27F377F900CB525E /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E683E927F377F900CB525E /* EntryViewController.swift */; };
+		82E683ED27F4BFA300CB525E /* Entry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E683EB27F4BFA300CB525E /* Entry+CoreDataClass.swift */; };
+		82E683EE27F4BFA300CB525E /* Entry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E683EC27F4BFA300CB525E /* Entry+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +53,10 @@
 		82E683D227F22B8600CB525E /* DailyJournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyJournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E683D627F22B8600CB525E /* DailyJournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyJournalUITests.swift; sourceTree = "<group>"; };
 		82E683D827F22B8600CB525E /* DailyJournalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyJournalUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		82E683E527F3764400CB525E /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		82E683E727F377B100CB525E /* EntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
 		82E683E927F377F900CB525E /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		82E683EB27F4BFA300CB525E /* Entry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		82E683EC27F4BFA300CB525E /* Entry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +109,10 @@
 			children = (
 				82E683B227F22B8300CB525E /* AppDelegate.swift */,
 				82E683B427F22B8300CB525E /* SceneDelegate.swift */,
-				82E683E527F3764400CB525E /* Entry.swift */,
 				82E683E727F377B100CB525E /* EntriesTableViewController.swift */,
 				82E683E927F377F900CB525E /* EntryViewController.swift */,
+				82E683EB27F4BFA300CB525E /* Entry+CoreDataClass.swift */,
+				82E683EC27F4BFA300CB525E /* Entry+CoreDataProperties.swift */,
 				82E683B827F22B8300CB525E /* Main.storyboard */,
 				82E683BE27F22B8600CB525E /* Assets.xcassets */,
 				82E683C027F22B8600CB525E /* LaunchScreen.storyboard */,
@@ -267,11 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82E683E627F3764400CB525E /* Entry.swift in Sources */,
 				82E683B327F22B8300CB525E /* AppDelegate.swift in Sources */,
+				82E683EE27F4BFA300CB525E /* Entry+CoreDataProperties.swift in Sources */,
 				82E683B527F22B8300CB525E /* SceneDelegate.swift in Sources */,
 				82E683BD27F22B8300CB525E /* DailyJournal.xcdatamodeld in Sources */,
 				82E683E827F377B100CB525E /* EntriesTableViewController.swift in Sources */,
+				82E683ED27F4BFA300CB525E /* Entry+CoreDataClass.swift in Sources */,
 				82E683EA27F377F900CB525E /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

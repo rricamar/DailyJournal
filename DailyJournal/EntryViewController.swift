@@ -5,18 +5,16 @@ class EntryViewController: UIViewController {
     @IBOutlet weak var entryDatePicker: UIDatePicker!
     @IBOutlet weak var entryTextView: UITextView!
     
-    var entriesVc: EntriesTableViewController?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        let entry = Entry()
-        entry.date = entryDatePicker.date
-        entry.text = entryTextView.text
-        
-        entriesVc?.entries.append(entry)
-        entriesVc?.tableView.reloadData()
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let entry = Entry(context: context)
+            entry.date = entryDatePicker.date
+            entry.text = entryTextView.text
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        }
     }
 }
