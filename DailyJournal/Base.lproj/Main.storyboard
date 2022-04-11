@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hz3-vc-9tt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hz3-vc-9tt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,7 +35,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="Nua-LY-YTb"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="76n-Kd-6Hw">
                             <connections>
-                                <segue destination="7Ii-Tp-EJe" kind="show" id="Qi6-TA-py3"/>
+                                <segue destination="7Ii-Tp-EJe" kind="show" identifier="segueToEntry" id="Qi6-TA-py3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -77,6 +77,9 @@
                     <navigationItem key="navigationItem" id="P34-gQ-wnV">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="TIr-T7-2tj">
                             <color key="tintColor" systemColor="systemPinkColor"/>
+                            <connections>
+                                <action selector="deleteTapped:" destination="7Ii-Tp-EJe" id="dcr-ov-0MS"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
