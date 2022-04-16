@@ -3,17 +3,26 @@ import UIKit
 class EntryViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var entryDatePicker: UIDatePicker!
     @IBOutlet weak var entryTextView: UITextView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 
     var entry: Entry?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil
+        )
 
         if isCreate() {
             if let viewContext = (getDelegate())?.persistentContainer.viewContext {
                 entry = Entry(context: viewContext)
                 entry?.date = entryDatePicker.date
                 entry?.text = entryTextView.text
+                entryTextView.becomeFirstResponder()
             }
         }
 
@@ -29,6 +38,15 @@ class EntryViewController: UIViewController, UITextViewDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         let delegate: AppDelegate? = getDelegate()
         (delegate)?.saveContext()
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            
+            bottomConstraint.constant = keyboardHeight
+        }
     }
 
     @IBAction func deleteTapped(_ sender: Any) {

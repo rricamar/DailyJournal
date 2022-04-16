@@ -20,6 +20,7 @@
 		82E683EA27F377F900CB525E /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E683E927F377F900CB525E /* EntryViewController.swift */; };
 		82E683ED27F4BFA300CB525E /* Entry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E683EB27F4BFA300CB525E /* Entry+CoreDataClass.swift */; };
 		82E683EE27F4BFA300CB525E /* Entry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E683EC27F4BFA300CB525E /* Entry+CoreDataProperties.swift */; };
+		8B93CD2B280AD57800713677 /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B93CD2A280AD57800713677 /* EntryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		82E683E927F377F900CB525E /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		82E683EB27F4BFA300CB525E /* Entry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		82E683EC27F4BFA300CB525E /* Entry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8B93CD2A280AD57800713677 /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				82E683B227F22B8300CB525E /* AppDelegate.swift */,
 				82E683B427F22B8300CB525E /* SceneDelegate.swift */,
 				82E683E727F377B100CB525E /* EntriesTableViewController.swift */,
+				8B93CD2A280AD57800713677 /* EntryTableViewCell.swift */,
 				82E683E927F377F900CB525E /* EntryViewController.swift */,
 				82E683EB27F4BFA300CB525E /* Entry+CoreDataClass.swift */,
 				82E683EC27F4BFA300CB525E /* Entry+CoreDataProperties.swift */,
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B93CD2B280AD57800713677 /* EntryTableViewCell.swift in Sources */,
 				82E683B327F22B8300CB525E /* AppDelegate.swift in Sources */,
 				82E683EE27F4BFA300CB525E /* Entry+CoreDataProperties.swift in Sources */,
 				82E683B527F22B8300CB525E /* SceneDelegate.swift in Sources */,
