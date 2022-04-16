@@ -59,6 +59,7 @@
 		82E683EB27F4BFA300CB525E /* Entry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		82E683EC27F4BFA300CB525E /* Entry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8B93CD2A280AD57800713677 /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
+		8B93CD2C280ADC9C00713677 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 		82E683A627F22B8300CB525E = {
 			isa = PBXGroup;
 			children = (
+				8B93CD2C280ADC9C00713677 /* README.md */,
 				82E683B127F22B8300CB525E /* DailyJournal */,
 				82E683CB27F22B8600CB525E /* DailyJournalTests */,
 				82E683D527F22B8600CB525E /* DailyJournalUITests */,
