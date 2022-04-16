@@ -9,7 +9,7 @@ class EntryViewController: UIViewController, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(keyboardWillShow),
@@ -18,7 +18,9 @@ class EntryViewController: UIViewController, UITextViewDelegate {
         )
 
         if isCreate() {
-            if let viewContext = (getDelegate())?.persistentContainer.viewContext {
+            if let viewContext = (getDelegate())?.persistentContainer
+                .viewContext
+            {
                 entry = Entry(context: viewContext)
                 entry?.date = entryDatePicker.date
                 entry?.text = entryTextView.text
@@ -39,19 +41,24 @@ class EntryViewController: UIViewController, UITextViewDelegate {
         let delegate: AppDelegate? = getDelegate()
         (delegate)?.saveContext()
     }
-    
+
     @objc func keyboardWillShow(_ notification: Notification) {
-        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+        if let keyboardFrame: NSValue =
+            notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey]
+            as? NSValue
+        {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
-            
+
             bottomConstraint.constant = keyboardHeight
         }
     }
 
     @IBAction func deleteTapped(_ sender: Any) {
         if !isCreate() {
-            if let viewContext = (getDelegate())?.persistentContainer.viewContext {
+            if let viewContext = (getDelegate())?.persistentContainer
+                .viewContext
+            {
                 viewContext.delete(entry!)
                 try? viewContext.save()
             }
@@ -64,7 +71,7 @@ class EntryViewController: UIViewController, UITextViewDelegate {
         entry?.date = entryDatePicker.date
         getDelegate()?.saveContext()
     }
-    
+
     func textViewDidChange(_ textView: UITextView) {
         entry?.text = textView.text
         getDelegate()?.saveContext()
